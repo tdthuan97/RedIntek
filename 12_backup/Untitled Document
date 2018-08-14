@@ -1,0 +1,28 @@
+Your mission
+At the beginning of this series, we said that Redis is an in-memory database by default. But you can specify it to store everything in a file, in case the program crashes or stops for any reason.
+
+Do you see where this is going ?
+
+Let's add a way to backup your database in a file and then read it back next time!
+
+Example
+
+
+$python
+>>> import redintek
+>>> redintek.put("toto", "tata", ex: 60)
+"tata"
+>>>exit()
+$python
+>>> import redintek
+>>> redintek.get("toto")
+"tata"
+>>>exit()
+$sleep 60 ; python
+>>> import redintek
+>>> redintek.get("toto")
+None
+>>>
+
+That's all folks...
+Here we are! Your very own Redis(-light) made by you!

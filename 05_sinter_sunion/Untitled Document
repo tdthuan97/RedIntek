@@ -1,0 +1,25 @@
+Your mission
+It was fun, wasn't it? Let's now add some tools for our new Sets. We need 2 new functions :
+
+sunion will give us a Set of all elements that are in different Sets. sinter will give us a Set of all elements that are shared between different Sets.
+
+For those functions, a non-existing key will be considered as an empty Set.
+
+def sunion(key1, key2):
+    """Return all elements present accross both Sets
+    >> sadd('actors', 'Leonardo DiCaprio')
+    >> sadd('actors', 'Will Smith')
+    >> sadd('actors', 'Scarlett Johansson')
+    >> sadd('singers', 'Madonna')
+    >> sadd('singers', 'Will Smith')
+    >> sunion('actors', 'singers')
+    {'Will Smith', 'Scarlett Johansson', 'Leonardo DiCaprio', 'Madonna'}
+    """
+
+def sinter(key1, key2):
+    """Return all elements shared between both Sets
+    >> sinter('actors', 'singers')
+    {'Will Smith'}
+    """
+
+

@@ -1,0 +1,23 @@
+Your mission
+Let's start with the basics. You will create 2 functions, one to put a pair of key/value in the database and one to get the value of a specific key. If the key already exists during a put operation, the new value will replace the old one.
+
+How can you store your data? You will probably need something that can be accessed... globally?
+
+def put(key, value):
+    """Put a pair of key/value in the database
+    >>> put("toto", "tata")
+    >>> put("toto", "titi")
+    >>> put("~pi", 3.14159)
+    >>> put(83, "eighty-three")
+    """
+
+def get(key):
+    """Return the value associated to the key in the database
+    >>> get("toto")
+    "titi"
+    >>> get(300)
+    None
+    """
+
+What we are expecting
+Re-read carefully the introduction. A Redis is an in-memory database: it is born with your script, and it shall die with it! Don't try to save the data to a file at that point, just store the data as Python objects.

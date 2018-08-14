@@ -1,0 +1,13 @@
+Your mission
+Ok, we should be careful now - because every time we add a key/value to our database, the database size will increase. Since our RAM is not unlimited, let's add a way to delete a specific key!
+
+Your computer will thank you!
+
+def delete(key):
+    """Delete the key from the database
+    >>> delete("toto")
+    >>> delete("not_existing_key")
+    >>> delete(83)
+    """
+
+

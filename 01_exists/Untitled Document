@@ -1,0 +1,14 @@
+Your mission
+Now that we can store stuff in our database, it's time to add a way to check if a key already exists.
+
+Not too hard, right?
+
+def exists(key):
+    """Return True if the key is in the database, False otherwise
+    >>> exists("toto")
+    True
+    >>> exists(300)
+    False
+    """
+
+

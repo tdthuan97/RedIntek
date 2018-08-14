@@ -1,0 +1,39 @@
+Your mission
+Ok, now that everything looks good and shiny, let's add a new type: the Hash.
+
+Hash is just another name for dict, and it works just like the python dict.
+
+We can add 3 functions (with proper return values 🌴):
+
+ hset will add a key/value pair to a hash
+ hget will get the value associated to a key in a hash
+ hgetall will get all the key/values in a hash
+Like sadd, hset will replace everything that is not an hash.
+
+def hset(key, hash_key, hash_value):
+    """Add the `hash_key`/`hash_value` pair to the hash associated to `key`
+    >> hset("Laurie", "hair_color", "black")
+    {'hair_color': "black"}
+    >> hset("Laurie", "height", 1.65)
+    {'height': 1.65}
+    >> hset("Lou", "eyes_color", "blue")
+    {'eyes_color': "blue"}
+    """
+
+def hget(key, hash_key):
+    """Get the value of `hash_key` in the hash associated to `key`
+    >> hget("Laurie", "height")
+    1.65
+    >> hget("Lou", "height")
+    None
+    >> hget("Mathieu", "height")
+    None
+    """
+
+def hgetall(key):
+    """Get all `hash_key`/`hash_value` pairs in the hash associated to `key`
+    >> hgetall("Laurie")
+    {'hair_color': "black", 'height': 1.65}
+    """
+
+

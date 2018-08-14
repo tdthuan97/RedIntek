@@ -1,0 +1,32 @@
+Your mission
+Good job, we now have an implementation of basic commands. Our redintek is starting to look good!
+
+Now we are going to add functions to use Sets in our database. First, we will add sadd and smembers.
+
+sadd will add the provided value to the set. If the key doesn't exist, it is created; if the current value associated to the key is not a set, it will be replaced by the new set. smembers will return all the values associated to a key, without changing the default order of the set.
+
+Beware, a set only contains unique values... but you knew that, right?
+
+def sadd(key, value):
+    """Add `value` to the set associated to `key`
+    >>> exists("staff")
+    False
+    >>> put("staff", "STAFF")
+    >>> sadd("staff", "Daniel")
+    >>> sadd("staff", "Laurie")
+    >>> sadd("staff", "Laurie")
+    """
+
+def smembers(key):
+    """Return the set values associated to `key`
+    >>> smembers("staff")
+    {'Daniel', 'Laurie'}
+    >>> smembers("not_existing_key")
+    None
+    >>> put("a", "A")
+    >>> smembers("a")
+    None
+    """
+
+
+

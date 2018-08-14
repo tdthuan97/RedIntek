@@ -1,0 +1,13 @@
+07_return_values
+Phewww! It was tough but we have a pretty good redintek. Still, it feels like something is missing... It lacks some developer-love™. 🌴
+
+Coding is not a purely solitary job - some people will use your functions or read your code, and your job is to be as nice as possible to them. That's why you should only use self-descripting function names, self-explanatory variable names (not 'a' or 'b' !), and you should return a useful "return value".
+
+So let's change our existing functions :
+
+put should now return the new value (it's better than returning nothing !)
+delete should now return True or False depending on if it really deleted something
+incr and incrby should now return the new value (useful to avoid another get call)
+sadd should return the value just added (once again, not super useful but better than returning nothing)
+srem should now return True or False depending on if it really deleted something
+🌈 Clean code makes developers happy, clean code makes the world a better place 🌈

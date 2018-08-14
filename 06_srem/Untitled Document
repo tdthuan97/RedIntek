@@ -1,0 +1,18 @@
+Your mission
+Time to think again about our dear computer memory. Let's save some RAM with a delete method for Set values. As you can see, everything that doesn't exist or is not a Set should be consider already deleted.
+
+def srem(key, value):
+    """Remove `value` in the set associated to `key`
+    >> put("toto", "tata")
+    >> sadd("numbers", 28)
+    >> srem("numbers", 28)
+    >> smembers("numbers")
+    {}
+    >> srem("numbers", 28)
+    >> srem("toto", 28)
+    >> srem("not_existing_key", 28)
+    """
+
+
+
+

@@ -1,0 +1,37 @@
+Your mission
+Can we improve the developer-love™? Let's add support for multiple arguments to some of our functions. Believe me, anybody using your code will mentally thank you for that.
+
+delete
+delete should now take at least 1 argument (and up to as many as we want). It will return the number of actual deletions.
+
+>> put(1, 'one')
+>> put(2, 'two')
+>> put(3, 'three')
+>> delete(2, 1, "not_existing_key", 1)
+2
+
+sadd
+sadd should now take at least 2 arguments: the key, and n (at least one) values. It will return the number of insertions.
+
+>> exists('singers')
+False
+>> sadd('singers', 'Michael Jackson', 'Madonna', 'Elvis', 'Madonna')
+3
+>> smembers('singers')
+{'Elvis', 'Madonna', 'Michael Jackson'}
+
+srem
+srem should now take at least 2 arguments: the key and n (at least one) values. It will return the number of actual deletions.
+
+Isn't it more convenient to use?
+
+>> exists('singers')
+False
+>> sadd('singers', 'Michael Jackson', 'Madonna', 'Elvis', 'Madonna')
+3
+>> srem('singers', 'Madonna', 'Justin Bieber')
+1
+>> smembers('singers')
+{'Elvis', 'Michael Jackson'}
+
+

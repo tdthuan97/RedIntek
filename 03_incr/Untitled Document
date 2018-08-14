@@ -1,0 +1,33 @@
+Your mission
+Time for some accounting !
+
+We want functions to count things - this will be useful to track things like the number of times a specific function is called (could be useful for optimization... !). The incr and incrby functions will help us do that.
+
+If the key doesn't exist yet, it will be added to the database and set to 0 before the incr or incrby operation is performed.
+
+Of course, you have to be careful: only integers and floats can be incremented.
+
+(As you may have noticed, incr is a special case of incrby. Maybe you can reduce the amount of code by having one function call the other?)
+
+def incr(key):
+    """Increment the value associated to `key` by one
+    >>> exists("my_counter")
+    False
+    >>> incr("my_counter")
+    >>> get("my_counter")
+    1
+    >>> put("toto", "tata")
+    >>> incr("toto")
+    Traceback (most recent call last):
+    ...
+    ValueError: Incorrect value
+    """
+
+def incrby(key, delta):
+    """Increment the value associated to `key` by `delta`
+    >>> incrby("my_counter", -10)
+    >>> get("my_counter")
+    -9
+    """
+
+

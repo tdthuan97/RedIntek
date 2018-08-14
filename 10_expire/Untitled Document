@@ -1,0 +1,37 @@
+Your mission
+Let's summarize. We can now store native types (Int, Float, String, Boolean) and 2 complex types (Set and Hash). We have a dozen of functions to interact with our types. We added some nice way to use those functions thanks to return values and multiple arguments. You did a great job, you can be proud of yourself!
+
+Now it's time to add some broader features. And the first one is: expiration.
+
+When you put data in your redintek with put, sadd or hset, you will now specify an expiration date for the key. All of the methods should take this expiration date into account. (It will probably change a lot of things in your code!)
+
+For sadd and hset the expiration date is valid for the whole Set or Hash, not just the value you're inserting. If the Set or Hash already exists, you will update its timeout (or remove it if no expiration date is specified).
+
+Example
+Use time.time() to get the current time!
+
+>> put("toto", "tata", expires_in=60)
+"tata"
+>> get("toto")
+"tata"
+>> exists("toto")
+True
+>> sadd("countries", "Viet Nam", expires_in=60)
+1
+>> sadd("planets", "Earth")
+1
+>> sadd("planets", "Mars", "Venus", expires_in=60)
+2
+>> sadd("planets", "Pluto <3")
+1
+… wait for 61 seconds...
+>> get("toto")
+None
+>> exists("toto")
+False
+>> exists("countries")
+False
+>> exists("planets")
+True
+
+
